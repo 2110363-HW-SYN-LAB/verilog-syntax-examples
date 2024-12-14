@@ -6,7 +6,8 @@ SUBDIRS = ex01_and_gate/test \
 BETTER_SOURCES = \
 	$(PWD)/ex01_and_gate/better_and_gate.v \
 	$(PWD)/ex02_1_bit_full_adder/better_full_adder.v \
-	$(PWD)/ex03_4_bit_half_adder/better_half_adder_4.v
+	$(PWD)/ex03_4_bit_half_adder/better_half_adder_4.v \
+	$(PWD)/ex04_4_input_multiplexer/better_mux_4.v
 
 .PHONY: all clean $(SUBDIRS)
 

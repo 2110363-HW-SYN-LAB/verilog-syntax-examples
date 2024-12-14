@@ -76,3 +76,12 @@ jobs:
           make TOPLEVEL=mux_4_ifelse VERILOG_SOURCES=../mux_4_ifelse.v
           ! grep failure results.xml
           cd ../..
+
+      # I decided to remain to use manual not using make all to run sub module
+      # because it easy to track error module in github workflow
+      - name: Run cocotb unit test [ex04_4_input_multiplexer_better]
+        run: |
+          cd ex04_4_input_multiplexer/test
+          make TOPLEVEL=better_mux_4 VERILOG_SOURCES=../better_mux_4.v
+          ! grep failure results.xml
+          cd ../..
