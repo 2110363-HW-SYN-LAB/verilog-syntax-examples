@@ -44,5 +44,7 @@ clean:
 	@rm -rf results.tap
 	@rm -rf *.xml
 	@rm -rf __pycache__
+	@rm -rf *.vvp
+	@rm -rf *.vcd
 
 .PHONY: all env test clean check_prereqs

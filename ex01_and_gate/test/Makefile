@@ -15,6 +15,8 @@ TOPLEVEL = and_gate
 # MODULE is the basename of the Python test file
 MODULE = and_gate_test
 
+include ../../Makefile.iverilog
+
 ifeq ($(OS), Darwin)
 	include ../../Makefile.Unix
 else ifeq ($(OS), Linux)

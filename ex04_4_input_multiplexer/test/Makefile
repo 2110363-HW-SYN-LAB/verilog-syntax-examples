@@ -15,6 +15,8 @@ TOPLEVEL = mux_4
 # MODULE is the basename of the Python test file
 MODULE = mux_4_test
 
+include ../../Makefile.iverilog
+
 ifeq ($(OS), Darwin)
 	include ../../Makefile.Unix
 else ifeq ($(OS), Linux)

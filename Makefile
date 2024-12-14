@@ -28,6 +28,20 @@ better:
 		$(MAKE) -C $$dir TOPLEVEL=$$module_name VERILOG_SOURCES=$$source; \
 	done
 
+build-all:
+	@for subdir in $(SUBDIRS); do \
+		$(MAKE) -C $$subdir build; \
+	done
+
+simulate-all:
+	@for subdir in $(SUBDIRS); do \
+		$(MAKE) -C $$subdir simulate; \
+	done
+
+build-simulate-all:
+	$(MAKE) build-all;
+	$(MAKE) simulate-all;
+
 clean:
 	for dir in $(SUBDIRS); do \
 		$(MAKE) -C $$dir clean; \

@@ -1,0 +1,5 @@
+build:
+	@iverilog -o $(TOPLEVEL).vvp -s $(TOPLEVEL)_tb ../*.v
+
+simulate:
+	@vvp $(TOPLEVEL).vvp
