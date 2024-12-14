@@ -62,3 +62,17 @@ jobs:
           make TOPLEVEL=better_half_adder_4 VERILOG_SOURCES=../better_half_adder_4.v
           ! grep failure results.xml
           cd ../..
+      
+      - name: Run cocotb unit test [ex04_4_input_multiplexer]
+        run: |
+          cd ex04_4_input_multiplexer/test
+          make
+          ! grep failure results.xml
+          cd ../..
+
+      - name: Run cocotb unit test [ex04_4_input_multiplexer_ifelse]
+        run: |
+          cd ex04_4_input_multiplexer/test
+          make TOPLEVEL=mux_4_ifelse VERILOG_SOURCES=../mux_4_ifelse.v
+          ! grep failure results.xml
+          cd ../..
