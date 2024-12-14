@@ -16,9 +16,9 @@ TOPLEVEL = mux_4
 MODULE = mux_4_test
 
 ifeq ($(OS), Darwin)
-	include Makefile.Unix
+	include ../../Makefile.Unix
 else ifeq ($(OS), Linux)
-	include Makefile.Unix
+	include ../../Makefile.Unix
 else
 	# include cocotb's make rules to take care of the simulator setup
 	include $(shell cocotb-config --makefiles)/Makefile.sim

@@ -1,5 +1,5 @@
 # Python environment variables
-VENV = venv
+VENV = $(shell pwd)/../../venv
 PYTHON = $(VENV)/bin/python
 PIP = $(VENV)/bin/pip
 PYTHON_VERSION := $(shell python3 -c "import sys; print(f'{sys.version_info.major}.{sys.version_info.minor}')")
