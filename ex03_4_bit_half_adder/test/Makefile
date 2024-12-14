@@ -13,5 +13,11 @@ TOPLEVEL = half_adder_4
 # MODULE is the basename of the Python test file
 MODULE = half_adder_4_test
 
-# include cocotb's make rules to take care of the simulator setup
-include $(shell cocotb-config --makefiles)/Makefile.sim
+ifeq ($(OS), Darwin)
+	include Makefile.Unix
+else ifeq ($(OS), Linux)
+	include Makefile.Unix
+else
+	# include cocotb's make rules to take care of the simulator setup
+	include $(shell cocotb-config --makefiles)/Makefile.sim
+endif
