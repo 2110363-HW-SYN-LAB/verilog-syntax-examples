@@ -18,8 +18,8 @@ module better_mux_4_tb ();
     );
 
     initial begin
-        $dumpfile("mux_4_tb.vcd");
-        $dumpvars(0, mux_4_tb);
+        $dumpfile("better_mux_4_tb.vcd");
+        $dumpvars(0, better_mux_4_tb);
 
         a   = 1'b0;
         b   = 1'b1;

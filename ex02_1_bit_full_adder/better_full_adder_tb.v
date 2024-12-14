@@ -18,8 +18,8 @@ module better_full_adder_tb ();
     );
 
     initial begin
-        $dumpfile("full_adder_tb.vcd");
-        $dumpvars(0, full_adder_tb);
+        $dumpfile("better_full_adder_tb.vcd");
+        $dumpvars(0, better_full_adder_tb);
 
         a   = 0;
         b   = 0;

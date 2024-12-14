@@ -14,8 +14,8 @@ module better_half_adder_4_tb ();
     );
 
     initial begin
-        $dumpfile("half_adder_4_tb.vcd");
-        $dumpvars(0, half_adder_4_tb);
+        $dumpfile("better_half_adder_4_tb.vcd");
+        $dumpvars(0, better_half_adder_4_tb);
 
         a = 4'b0000;
         b = 4'b0000;

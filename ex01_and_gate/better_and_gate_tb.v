@@ -18,8 +18,8 @@ module better_and_gate_tb ();
     );
 
     initial begin
-        $dumpfile("and_gate_tb.vcd");
-        $dumpvars(0, and_gate_tb);
+        $dumpfile("better_and_gate_tb.vcd");
+        $dumpvars(0, better_and_gate_tb);
 
         a = 0;
         b = 0;
