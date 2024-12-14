@@ -1,10 +1,8 @@
 module mux_4 (
     input a, b, c, d,
     input [1:0] sel,
-    output out
+    output reg out
 );
-
-    reg out;
 
     always @(*) begin
         case(sel)
