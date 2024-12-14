@@ -1,17 +1,25 @@
-# Simulator
-SIM ?= icarus
+OS := $(shell uname -s)
 
-# Top level language
-TOPLEVEL_LANG ?= verilog
+ifeq ($(OS), Darwin)
+	include Makefile.Unix
+else ifeq ($(OS), Linux)
+	include Makefile.Unix
+else
+	# Simulator
+	SIM ?= icarus
 
-# Files
-VERILOG_SOURCES = $(shell pwd)/../and_gate.v
+	# Top level language
+	TOPLEVEL_LANG ?= verilog
 
-# TOPLEVEL is the name of the toplevel module in your Verilog or VHDL file
-TOPLEVEL = and_gate
+	# Files
+	VERILOG_SOURCES = $(shell pwd)/../and_gate.v
 
-# MODULE is the basename of the Python test file
-MODULE = and_gate_test
+	# TOPLEVEL is the name of the toplevel module in your Verilog or VHDL file
+	TOPLEVEL = and_gate
 
-# include cocotb's make rules to take care of the simulator setup
-include $(shell cocotb-config --makefiles)/Makefile.sim
+	# MODULE is the basename of the Python test file
+	MODULE = and_gate_test
+
+	# include cocotb's make rules to take care of the simulator setup
+	include $(shell cocotb-config --makefiles)/Makefile.sim
+endif

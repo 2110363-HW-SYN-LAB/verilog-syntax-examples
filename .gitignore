@@ -4,3 +4,5 @@
 __pycache__
 sim_build
 results.xml
+venv
+.DS_Store
