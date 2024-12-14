@@ -26,6 +26,7 @@ env:
 
 # Run tests with explicit paths
 test: env check_prereqs
+	@rm -rf sim_build
 	@echo "Running Cocotb tests..."
 	@cd $(shell pwd) && \
 	PYTHONPATH=$(VENV)/lib/python$(PYTHON_VERSION)/site-packages \
