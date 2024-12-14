@@ -21,8 +21,16 @@ jobs:
       - name: Install cocotb
         run: pip install cocotb
       
-      - name: Run cocotb test
+      - name: Run cocotb unit test [ex01_and_gate]
         run: |
           cd ex01_and_gate/test
           make
           ! grep failure results.xml
+          cd ../..
+      
+      - name: Run cocotb unit test [ex02_1_bit_full_adder]
+        run: |
+          cd ex02_1_bit_full_adder/test
+          make
+          ! grep failure results.xml
+          cd ../..
