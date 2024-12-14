@@ -34,3 +34,10 @@ jobs:
           make
           ! grep failure results.xml
           cd ../..
+      
+      - name: Run cocotb unit test [ex03_4_bit_half_adder]
+        run: |
+          cd ex03_4_bit_half_adder/test
+          make
+          ! grep failure results.xml
+          cd ../..
