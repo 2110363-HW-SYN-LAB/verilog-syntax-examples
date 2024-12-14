@@ -1,3 +1,5 @@
+OS := $(shell uname -s)
+
 # Simulator
 SIM ?= icarus
 
