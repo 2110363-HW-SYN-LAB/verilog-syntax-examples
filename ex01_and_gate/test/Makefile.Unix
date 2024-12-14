@@ -1,9 +1,3 @@
-# Simulator (ensure this matches your installed simulator)
-SIM ?= icarus
-
-# Top level language
-TOPLEVEL_LANG ?= verilog
-
 # Python environment variables
 VENV = venv
 PYTHON = $(VENV)/bin/python
@@ -12,15 +6,6 @@ PYTHON_VERSION := $(shell python3 -c "import sys; print(f'{sys.version_info.majo
 
 # Explicitly set the path to simulators and cocotb
 COCOTB_HOME = $(VENV)/lib/python$(PYTHON_VERSION)/site-packages/cocotb
-
-# Files
-VERILOG_SOURCES = $(shell pwd)/../and_gate.v
-
-# TOPLEVEL is the name of the toplevel module in your Verilog or HDVL file
-TOPLEVEL = and_gate
-
-# MODULE is the basename of the Python test file
-MODULE = and_gate_test
 
 # Default target
 all: check_prereqs test
