@@ -85,3 +85,10 @@ jobs:
           make TOPLEVEL=better_mux_4 VERILOG_SOURCES=../better_mux_4.v
           ! grep failure results.xml
           cd ../..
+
+      - name: Run cocotb unit test [ex05_dff]
+        run: |
+          cd ex05_dff/test
+          make
+          ! grep failure results.xml
+          cd ../..
