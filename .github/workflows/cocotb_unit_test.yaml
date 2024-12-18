@@ -92,3 +92,10 @@ jobs:
           make
           ! grep failure results.xml
           cd ../..
+      
+      - name: Run cocotb unit test [ex06_parameterized_half_adder_w1]
+        run: |
+          cd ex06_parameterized_half_adder/test/w1
+          make
+          ! grep failure results.xml
+          cd ../../..
