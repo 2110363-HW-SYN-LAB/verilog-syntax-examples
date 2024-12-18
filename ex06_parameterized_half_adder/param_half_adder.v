@@ -3,10 +3,10 @@ module param_half_adder #(
 ) (
     input wire [WIDTH-1:0] a,
     input wire [WIDTH-1:0] b,
-    output wire [WIDTH-1:0] sum,
-    output wire carry
+    output wire [WIDTH-1:0] s,
+    output wire cout
 );
 
-    assign {carry, sum} = a + b;
+    assign {cout, s} = a + b;
 
 endmodule

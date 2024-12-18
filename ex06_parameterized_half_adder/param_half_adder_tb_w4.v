@@ -11,8 +11,8 @@ module param_half_adder_tb_w4();
     ) uut (
         .a(a),
         .b(b),
-        .sum(sum),
-        .carry(carry)
+        .s(sum),
+        .cout(carry)
     );
 
     initial begin

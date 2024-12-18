@@ -9,8 +9,8 @@ module param_half_adder_tb_w1();
     param_half_adder uut (
         .a(a),
         .b(b),
-        .sum(sum),
-        .carry(carry)
+        .s(sum),
+        .cout(carry)
     );
 
     initial begin
