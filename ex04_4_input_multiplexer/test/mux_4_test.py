@@ -1,5 +1,8 @@
+import os
+from pathlib import Path
 import cocotb
 from cocotb.triggers import Timer
+from cocotb_tools.runner import get_runner
 
 @cocotb.test()
 async def mux_4_test_all_combination(dut):
@@ -35,7 +38,7 @@ async def mux_4_test_all_combination(dut):
         dut.c.value = c[i]
         dut.d.value = d[i]
         dut.sel.value = sel[i]
-        await Timer(1, units='ns')
+        await Timer(1, unit='ns')
         assert dut.out.value == out[i], f"[Iteration {i}] output is {dut.out.value}, expected {out[i]}"
         
         
@@ -54,5 +57,38 @@ async def mux_4_test_change_selector(dut):
     
     for i in range(4):
         dut.sel.value = i
-        await Timer(1, units='ns')
+        await Timer(1, unit='ns')
         assert dut.out.value == out[i], f"[Iteration {i}] output is {dut.out.value}, expected {out[i]}"
+
+def runner():  
+    # Path to all related Verilog files
+    verilog_files = [
+        "../mux_4.v"
+    ]
+    
+    # Top-level module name
+    top_module = "mux_4"
+    
+    # Test module name
+    test_module = "mux_4_test"
+    
+    sim = os.getenv("SIM", "icarus")
+
+    proj_path = Path(__file__).resolve().parent
+
+    sources = [proj_path / Path(f) for f in verilog_files]
+    
+    runner = get_runner(sim)
+
+    runner.build(
+        sources=sources,
+        hdl_toplevel=top_module,
+        always=True,
+        waves=True,
+        timescale=('1ns','1ps')
+    )
+    
+    runner.test(hdl_toplevel=top_module, test_module=test_module, waves=True)
+
+if __name__ == "__main__":
+    runner()

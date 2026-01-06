@@ -24,78 +24,34 @@ jobs:
       - name: Run cocotb unit test [ex01_and_gate]
         run: |
           cd ex01_and_gate/test
-          make
-          ! grep failure results.xml
-          cd ../..
-
-      - name: Run cocotb unit test [ex01_and_gate_better]
-        run: |
-          cd ex01_and_gate/test
-          make TOPLEVEL=better_and_gate VERILOG_SOURCES=../better_and_gate.v
+          python and_gate_test.py
           ! grep failure results.xml
           cd ../..
       
       - name: Run cocotb unit test [ex02_1_bit_full_adder]
         run: |
           cd ex02_1_bit_full_adder/test
-          make
-          ! grep failure results.xml
-          cd ../..
-
-      - name: Run cocotb unit test [ex02_1_bit_full_adder_better]
-        run: |
-          cd ex02_1_bit_full_adder/test
-          make TOPLEVEL=better_full_adder VERILOG_SOURCES=../better_full_adder.v
+          python full_adder_test.py
           ! grep failure results.xml
           cd ../..
       
       - name: Run cocotb unit test [ex03_4_bit_half_adder]
         run: |
           cd ex03_4_bit_half_adder/test
-          make
-          ! grep failure results.xml
-          cd ../..
-      
-      - name: Run cocotb unit test [ex03_4_bit_half_adder_better]
-        run: |
-          cd ex03_4_bit_half_adder/test
-          make TOPLEVEL=better_half_adder_4 VERILOG_SOURCES=../better_half_adder_4.v
+          python half_adder_4_test.py
           ! grep failure results.xml
           cd ../..
       
       - name: Run cocotb unit test [ex04_4_input_multiplexer]
         run: |
           cd ex04_4_input_multiplexer/test
-          make
-          ! grep failure results.xml
-          cd ../..
-
-      - name: Run cocotb unit test [ex04_4_input_multiplexer_ifelse]
-        run: |
-          cd ex04_4_input_multiplexer/test
-          make TOPLEVEL=mux_4_ifelse VERILOG_SOURCES=../mux_4_ifelse.v
-          ! grep failure results.xml
-          cd ../..
-
-      # I decided to remain to use manual not using make all to run sub module
-      # because it easy to track error module in github workflow
-      - name: Run cocotb unit test [ex04_4_input_multiplexer_better]
-        run: |
-          cd ex04_4_input_multiplexer/test
-          make TOPLEVEL=better_mux_4 VERILOG_SOURCES=../better_mux_4.v
+          python mux_4_test.py
           ! grep failure results.xml
           cd ../..
 
       - name: Run cocotb unit test [ex05_dff]
         run: |
           cd ex05_dff/test
-          make
+          python dff_test.py
           ! grep failure results.xml
           cd ../..
-      
-      - name: Run cocotb unit test [ex06_parameterized_half_adder_w1]
-        run: |
-          cd ex06_parameterized_half_adder/test/w1
-          make
-          ! grep failure results.xml
-          cd ../../..

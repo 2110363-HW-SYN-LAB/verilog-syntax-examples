@@ -2,13 +2,13 @@
 
 module dff_tb ();
 
-    reg d;
-    reg clk;
+    reg  d;
+    reg  clk;
     wire q;
 
     dff dff_inst (
-        .q(q),
-        .d(d),
+        .q  (q),
+        .d  (d),
         .clk(clk)
     );
 
@@ -32,5 +32,5 @@ module dff_tb ();
         #20 $finish;
     end
 
-    
+
 endmodule

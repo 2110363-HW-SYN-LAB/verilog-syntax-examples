@@ -1,7 +1,10 @@
 module mux_4_ifelse (
-    input a, b, c, d,
-    input [1:0] sel,
-    output reg out
+    input  wire       a,
+    input  wire       b,
+    input  wire       c,
+    input  wire       d,
+    input  wire [1:0] sel,
+    output reg        out
 );
 
     always @(*) begin

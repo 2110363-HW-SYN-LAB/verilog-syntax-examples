@@ -7,7 +7,6 @@ This repository is based on "Lab 1 Brief" documentation, which shows examples fo
 - [Example 3: 4-bit Full Adder](https://github.com/2110363-HW-SYN-LAB/verilog-syntax-examples/tree/main/ex03_4_bit_half_adder)
 - [Example 4: 4-input Multiplexer](https://github.com/2110363-HW-SYN-LAB/verilog-syntax-examples/tree/main/ex04_4_input_multiplexer)
 - [Example 5: D Flip Flop](https://github.com/2110363-HW-SYN-LAB/verilog-syntax-examples/tree/main/ex05_dff)
-- [Example 6: Parameterized Full Adder (N-bit Full Adder)](https://github.com/2110363-HW-SYN-LAB/verilog-syntax-examples/tree/main/ex06_parameterized_half_adder)
 
 ## Running Cocotb Tests
 
