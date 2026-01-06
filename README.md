@@ -24,9 +24,9 @@ cd test
 conda activate <venv_name>
 ```
 
-- Run the test using GNU Make.
+- Run the test.
 
 ```sh
-make
+python <python_file>
 ```
 
