@@ -25,33 +25,33 @@ jobs:
         run: |
           cd ex01_and_gate/test
           python and_gate_test.py
-          ! grep failure results.xml
+          ! grep failure sim_build/results.xml
           cd ../..
       
       - name: Run cocotb unit test [ex02_1_bit_full_adder]
         run: |
           cd ex02_1_bit_full_adder/test
           python full_adder_test.py
-          ! grep failure results.xml
+          ! grep failure sim_build/results.xml
           cd ../..
       
       - name: Run cocotb unit test [ex03_4_bit_half_adder]
         run: |
           cd ex03_4_bit_half_adder/test
           python half_adder_4_test.py
-          ! grep failure results.xml
+          ! grep failure sim_build/results.xml
           cd ../..
       
       - name: Run cocotb unit test [ex04_4_input_multiplexer]
         run: |
           cd ex04_4_input_multiplexer/test
           python mux_4_test.py
-          ! grep failure results.xml
+          ! grep failure sim_build/results.xml
           cd ../..
 
       - name: Run cocotb unit test [ex05_dff]
         run: |
           cd ex05_dff/test
           python dff_test.py
-          ! grep failure results.xml
+          ! grep failure sim_build/results.xml
           cd ../..
