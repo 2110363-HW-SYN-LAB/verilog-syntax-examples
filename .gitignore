@@ -4,5 +4,6 @@
 __pycache__
 sim_build
 results.xml
+waveform_converter.py
 venv
 .DS_Store

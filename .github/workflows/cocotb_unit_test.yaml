@@ -55,3 +55,17 @@ jobs:
           python dff_test.py
           ! grep failure sim_build/results.xml
           cd ../..
+
+      - name: Run cocotb unit test [ex06_odd_parity_checker]
+        run: |
+          cd ex06_odd_parity_checker/test
+          python odd_parity_checker_test.py
+          ! grep failure sim_build/results.xml
+          cd ../..
+      
+      - name: Run cocotb unit test [ex07_single_pulser]
+        run: |
+          cd ex07_single_pulser/test
+          python single_pulser_test.py
+          ! grep failure sim_build/results.xml
+          cd ../..
