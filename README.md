@@ -13,6 +13,11 @@ This repository is based on slides, which shows examples for Verilog syntax with
 - [Example 6: Odd Parity Checker](https://github.com/2110363-HW-SYN-LAB/verilog-syntax-examples/tree/main/ex06_odd_parity_checker)
 - [Example 7: Single Pulser](https://github.com/2110363-HW-SYN-LAB/verilog-syntax-examples/tree/main/ex07_single_pulser)
 
+**Lab 3**
+- [Example 8: Testbench for 2-bit Half Adder](https://github.com/2110363-HW-SYN-LAB/verilog-syntax-examples/tree/main/ex08_2_bit_half_adder_tb)
+- [Example 9: Testbench for Single Pulser](https://github.com/2110363-HW-SYN-LAB/verilog-syntax-examples/tree/main/ex09_single_pulser_tb)
+- [Example 10: Testbench for 4-bit Counter](https://github.com/2110363-HW-SYN-LAB/verilog-syntax-examples/tree/main/ex10_4_bit_counter_tb)
+
 ## Running Cocotb Tests
 
 To run Cocotb testbenches, you need to install Cocotb (using Python 3.6+) with GNU Make and Icarus Verilog. The guide for installation is in MCV.
